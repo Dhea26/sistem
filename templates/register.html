@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% set page_title = "Register" %}
+
+{% block _content %}
+
+
+<h1>Ini Halaman Register</h1>
+<form action="{{ url_for('register') }}" method="POST">
+    <div class="form-group">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" class="form-control" id="nama" name="nama" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="no_hp">NO Handphone</label>
+      <input type="number" class="form-control" id="no_hp" name="no_hp" required>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Tambah Registrasi">
+    
+  </form>
+<!-- <a href="/register/tambah" type="submit" class="btn btn-primary" value="Tambah Register">Tambah User</a>
+<hr>
+<table border="1" class="table table-striped table-dark">
+    <tr>
+        
+        <th>Email</th>
+        <th>Password</th>
+        <th>Action</th>
+    </tr>
+   {% for m in data %} 
+   <tr>
+       <td>{{ m["email"] }}</td>
+       <td>{{ m["password"] }}</td>
+       <td>
+           <a href="/register/lihat/{{ m.id }}" class="btn btn-primary" >Lihat</a>
+           <a href="/register/ubah/{{ m.id }}" class="btn btn-success">Ubah</a>
+           <a href="/register/hapus/{{ m.id }}" class="btn btn-danger">Hapus</a>
+       </td>
+   </tr>
+   {% endfor %}
+</table> -->
+
+{% endblock %}

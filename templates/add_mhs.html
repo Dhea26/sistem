@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block _content %}
+
+
+<h1>ini halaman tambah mahasiswa</h1>
+<hr>
+<form action="{{ url_for('tambah_mhs') }}" method="POST">
+    <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" class="form-control" id="nama" name="nama">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="nim">NIM</label>
+        <input type="number" class="form-control" id="nim" name="nim">
+      </div>
+      <div class="form-group">
+        <label for="jurusan">Jurusan</label>
+        <input type="text" class="form-control" id="jurusan" name="jurusan">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Tambah Mahasiswa">
+    <!-- <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" name="nama" id="nama">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="nim">NIM</label>
+        <input type="number" name="nim" id="nim">
+    </div>
+    <div class="form-group">
+        <label for="jurusan">Jurusan</label>
+        <input type="text" name="jurusan" id="jurusan">
+    </div>
+    <input type="submit" value="Tambah Mahasiswa"> -->
+</form>
+
+
+{% endblock %}

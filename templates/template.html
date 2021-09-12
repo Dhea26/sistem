@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% set page_title = "Template" %}
+{% block _content %}
+
+
+<h1>Ini Halaman Mahasiswa</h1>
+<a href="/mahasiswa/tambah" type="submit" class="btn btn-primary" value="Tambah Mahasiswa">Tambah Mahasiswa</a>
+<hr>
+<table border="1" class="table table-striped table-dark">
+    <tr>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>NIM</th>
+        <th>Jurusan</th>
+        <th>Action</th>
+    </tr>
+   {% for m in data %} 
+   <tr>
+       <td>{{ m["nama"] }}</td>
+       <td>{{ m["email"] }}</td>
+       <td>{{ m["nim"] }}</td>
+       <td>{{ m["jurusan"] }}</td>
+       <td>
+           <a href="/mahasiswa/lihat/{{ m.id }}" class="btn btn-primary" >Lihat</a>
+           <a href="/mahasiswa/ubah/{{ m.id }}" class="btn btn-success">Ubah</a>
+           <a href="/mahasiswa/delete/{{ m.id }}" class="btn btn-danger">Delete</a>
+       </td>
+   </tr>
+   {% endfor %}
+</table>
+
+
+
+{% endblock %}
